@@ -1,2 +1,1 @@
-rustc src/main.rs
-main.exe
+rustc src/main.rs && main.exe

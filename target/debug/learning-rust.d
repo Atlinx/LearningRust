@@ -1,1 +1,0 @@
-C:\Users\Alan\Desktop\Open_Source\LearningRust\target\debug\learning-rust.exe: C:\Users\Alan\Desktop\Open_Source\LearningRust\src\helloworld.rs C:\Users\Alan\Desktop\Open_Source\LearningRust\src\main.rs
