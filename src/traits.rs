@@ -4,6 +4,7 @@
 use std::ops;
 
 pub fn main() {
+    // 16) Traits
     {
         #[derive(Debug)]
         struct Sheep {
