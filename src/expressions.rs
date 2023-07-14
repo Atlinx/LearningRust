@@ -3,5 +3,12 @@
 
 pub fn main() {
     // 7) Expressions
-    // TODO:
+    let x = {
+        let a = 5;
+        let b = a + 5;
+
+        a * b
+    };
+
+    println!("x: {}", x);
 }
