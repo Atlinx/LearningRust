@@ -199,4 +199,41 @@ pub fn main() {
         // `_a` *won't* be `drop`ed again here, because it already has been
         // (manually) `drop`ed
     }
+
+    {
+        // 16.9) Disambiguating overlapping traits
+        trait UsernameWidget {
+            fn get(&self) -> String;
+        }
+
+        trait AgeWidget {
+            fn get(&self) -> u8;
+        }
+
+        struct Form {
+            username: String,
+            age: u8,
+        }
+
+        impl UsernameWidget for Form {
+            fn get(&self) -> String {
+                self.username.clone()
+            }
+        }
+
+        impl AgeWidget for Form {
+            fn get(&self) -> u8 {
+                self.age.clone()
+            }
+        }
+
+        let form = Form {
+            username: "rustacean".to_owned(),
+            age: 28,
+        };
+
+        let username = <Form as UsernameWidget>::get(&form);
+        let age = <Form as AgeWidget>::get(&form);
+        println!("From form, got username: {}, age: {}", username, age);
+    }
 }

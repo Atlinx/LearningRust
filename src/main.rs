@@ -1,6 +1,7 @@
 mod attributes;
 mod conversion;
 mod custom_types;
+mod error_handling;
 mod expressions;
 mod flow_of_control;
 mod functions;
@@ -11,6 +12,8 @@ mod macro_rules;
 mod modules;
 mod primitives;
 mod scoping_rules;
+mod std_library_types;
+mod testing;
 mod traits;
 mod types;
 mod variable_bindings;
@@ -31,5 +34,7 @@ fn main() {
     // generics::main();
     // scoping_rules::main();
     // traits::main();
-    macro_rules::main();
+    // macro_rules::main();
+    // error_handling::main();
+    // std_library_types::main();
 }
